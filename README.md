@@ -5,7 +5,7 @@ To load data of a particular election eg. 2014 Lok Sabha Election
 ```
 import pickle
 
-lse2014 = pickle.load(open('election_data_lse2014.dat')
+lse2014 = pickle.load(open('election_data_lse2014.dat', 'rb'))
 ```
 
 This variable is an instance of the class <code>elections</code> in ```classes.py```.
