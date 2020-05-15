@@ -2,7 +2,7 @@
 This repository contains pickled election data for Lok Sabh Election. Data is from the official website of the election commission of India.
 
 To load data of a particular election eg. 2014 Lok Sabha Election
-```
+```python
 import pickle
 import classes
 
