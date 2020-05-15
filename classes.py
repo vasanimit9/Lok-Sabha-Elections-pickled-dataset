@@ -18,7 +18,7 @@ class candidate(object):
         output = "Candidate\nName: " + self.name + "\n"
         output += "Party: " + self.party + "\n"
         output += "Constituency: " + self.constituency + "\n"
-        output += "Votes: " + str(self.votes) + " (" + str(round(self.percentageOfVotes(), 2)) + "%)\n"
+        output += "Votes: " + str(self.votes) + " (" + str(round(self.percentageOfVotes(), 2)) + "%%)\n"
         return output
         
 class constituency(object):
@@ -43,7 +43,7 @@ class constituency(object):
         else:
             difference = self.candidates[0].votes
         if percentage:
-            return difference/self.total_voters
+            return 100*difference/self.total_voters
         else:
             return difference
         
@@ -52,7 +52,7 @@ class constituency(object):
         
     def __str__(self):
         output = "Constituency: " + self.name + "\n"
-        output += "Voters: " + str(self.total_voters) + " (" + str(round(self.percentageTurnout(), 2)) + "% turnout)\n"
+        output += "Voters: " + str(self.total_voters) + " (" + str(round(self.percentageTurnout(), 2)) + "%% turnout)\n"
         output += "State: " + self.state + "\n"
         output += "Candidates: " + str(len(self.candidates))
         return output
