@@ -4,6 +4,7 @@ This repository contains pickled election data for Lok Sabh Election. Data is fr
 To load data of a particular election eg. 2014 Lok Sabha Election
 ```
 import pickle
+import classes
 
 lse2014 = pickle.load(open('election_data_lse2014.dat', 'rb'))
 ```
